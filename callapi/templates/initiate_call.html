@@ -1,0 +1,75 @@
+<!-- call_records/templates/call_records/initiate_call.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Initiate Call</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px 0px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            
+            min-height: 100px;
+        }
+        .container {
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Initiate Call</h1>
+        <form action="/initiate-call/" method="post">
+            {% csrf_token %}
+            <label for="from_number">From Number:</label>
+            <input type="text" id="from_number" name="from_number" placeholder="Enter from number" required>
+            <label for="to_number">To Number:</label>
+            <input type="text" id="to_number" name="to_number" placeholder="Enter to number" required>
+            <button type="submit">Initiate Call</button>
+        </form>
+    </div>
+</body>
+</html>

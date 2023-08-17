@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px 0px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .action-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        .action-links li {
+            margin-bottom: 10px;
+        }
+        .action-links a {
+            display: block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .action-links a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Choose an Action:</h2>
+        <ul class="action-links">
+            <li><a href="/initiate-call/">Initiate Call</a></li>
+        <li><a href="/call-report">Generate Call Report</a></li>
+        </ul>
+    </div>
+</body>
+</html>
